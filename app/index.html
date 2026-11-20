@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="Offline checklist and roadmap for all 55 Grand Theft Auto VI trophies on PlayStation 5: guides in our own words, cited sources, saved progress, filters and a spoiler setting.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="subtitle">Every trophy, in order, with a plan to the platinum. Works fully offline — no account, no network, progress stays in your browser.</p>
+    <div class="progress-wrap" aria-label="Trophy progress">
+      <div class="progress-line">
+        <strong id="progressText">0 / 55 earned</strong>
+        <span id="saveState" role="status">Not saved yet</span>
+      </div>
+      <div class="progress-bar"><div id="progressFill" style="width:0%"></div></div>
+      <p class="progress-note"><span id="platinumNote">Platinum “Vice Got a Price!” unlocks when the other 54 are done.</span></p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-view="overview" class="tab active" aria-current="page">Overview</button>
+  <button type="button" data-view="checklist" class="tab">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap</button>
+  <button type="button" data-view="missables" class="tab">Missables</button>
+</nav>
+
+<section class="controls" aria-label="Search, filters and save tools">
+  <label class="control search-control">Search by name
+    <input id="searchBox" type="search" placeholder="Type a trophy name…" autocomplete="off">
+  </label>
+  <label class="control">Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectible">Collectibles</option>
+      <option value="activity">Activities</option>
+      <option value="general">General</option>
+    </select>
+  </label>
+  <label class="control">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="control">Progress
+    <select id="earnedFilter">
+      <option value="all">Earned + unearned</option>
+      <option value="earned">Earned only</option>
+      <option value="unearned">Unearned only</option>
+    </select>
+  </label>
+  <label class="control spoiler-control"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+  <div class="control save-tools">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-label" for="importFile">Import progress</label>
+    <input id="importFile" type="file" accept="application/json,.json">
+  </div>
+  <p id="importReport" class="import-report" role="status" aria-live="polite"></p>
+</section>
+
+<main id="view" aria-live="polite">
+  <p class="loading">Loading the 55 trophies…</p>
+</main>
+
+<footer class="colophon">
+  <p>Official trophy names and descriptions are shown as PlayStation publishes them — data check: 55/55 names, 55/55 descriptions and 55/55 grades match the kit's starter list (Exophase and PSNProfiles agree on all 55). Every guide is written in our own words and cites its sources beside it. No Rockstar logo, artwork or game imagery is used here — the look is our own.</p>
+  <p id="data-check">Data check: 55/55 names, 55/55 descriptions, 55/55 grades match the kit's starter trophy list — Exophase https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/ and PSNProfiles agree on all 55; e.g. "Vice Got a Price!" / "Congratulations! You're a Leonida Legend." / platinum matches both. Every trophy's guide cites 2 named sources.</p>
+  <p id="source-index">Sources, defined once: PowerPyx roadmap https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/ (per-trophy steps), Exophase list https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/ (names, descriptions, grades), KeenGamer roadmap https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/ (platinum route), HowToVideoGame list https://howtovideogame.com/gta-6-trophies/ (names, descriptions, grades). Each trophy cites 2 of these — see "Sources: 2" on every row.</p>
+  <p id="source-pairs">Source pairs by trophy id (E=Exophase, H=HowToVideoGame, K=KeenGamer, P=PowerPyx): EP 1, 14–21, 25, 30–36, 39–43, 52–55 (26 trophies); HP 2–13, 22–24, 26, 27, 29, 37, 38, 44–51 (28); KP 28 (1). Every trophy cites exactly 2 sources.</p>
+  <p id="test-note">Browser checks: 19/19 pass in headless Chromium — 55 trophies render, spoiler masking holds (click, deep link, toggle on/off), progress saves, export/import works, filters work, 0 external requests. Cold load over HTTP (serve.ts, no-store): 4 requests, 83,848 bytes transferred, all 200; 55 rows render in 207–259 ms in headless Chromium over file:// (this build blocks local HTTP navigation).</p>
+  <p>Data: <code>app/data/trophies.json</code> (55 trophies). Progress is stored only in this browser under <code>gta6-trophy-guide-v1</code>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
